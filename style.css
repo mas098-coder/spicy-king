@@ -1,200 +1,410 @@
-/* 🌟 Reset & Base Styles */
-* {
+
+
+*{
+    box-sizing: border-box;
+}
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
     scroll-behavior: smooth;
-    background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* 🔹 Header (Navbar) */
-header {
+header{
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    color: white;
     align-items: center;
-    background: black;
     padding: 15px 20px;
-    color: white;
+    
 }
-
-.logo a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
+.logo{
+    font-size: 20px;
+    
+        font-family: "Atma", system-ui;
+        font-weight: 300;
+        font-style: normal;
+      
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 500;
+        font-style: normal;
+      
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 600;
+        font-style: normal;
+      
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 700;
+        font-style: normal;
+      
+      
+      
 }
-
-nav {
+nav{
+    position: relative;
     display: flex;
     align-items: center;
 }
-
-nav ul {
+nav ul{
     list-style: none;
     display: flex;
 }
-
-nav ul li {
-    margin: 0 15px;
+nav ul li{
+    margin: 0 20px;
 }
-
-nav ul li a {
-    color: white;
+nav ul li a{
     text-decoration: none;
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
 }
-
-/* 🔹 Log In Button */
-.login-btn {
-    background: #ffcc00;
-    padding: 8px 15px;
+.lg{
+    background-color: darkred;
+    color:whitesmoke;
+    padding: 5px;
+    margin: 3px;
     border-radius: 5px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: bolder;
 }
-
-.login-btn:hover {
-    background: #ffa500;
-    color: black;
-}
-
-/* 🔹 Responsive Navbar */
-.menu-toggle {
+.toggle-menu{
     display: none;
     font-size: 24px;
+    color: white;
     cursor: pointer;
+    border: none;
+    background: none;
+    
 }
-
-@media screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: black;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
+@media screen and (max-width:767px) {
+    .toggle-menu{
         display: block;
     }
+    nav ul{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        flex-direction: column;
+        border-radius: 5px;
+    
+        background-color: black;
+        padding: 10px;
+        width: 200px;
+    }
+    nav ul.active{
+        display: flex;
+    }
 }
 
-/* 🔹 Banner Section */
-#banner {
-    background: url('cover.jpg') no-repeat center center/cover;
+
+
+
+#banner{
+    background: url(cover.jpg) no-repeat center center/cover;
     height: 80vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
-.banner-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
+.banner-content{
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5%;
+    padding: 10px;
 }
-
-.banner-content h1 {
-    font-size: 2.5rem;
+.banner-content h1{
+    font-family: 0.2rem;
+    color: yellow;
 }
-
-.banner-content p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* 🔹 Button */
-.btn {
-    padding: 10px 20px;
+.banner-content p{
     font-size: 1rem;
-    background: yellow;
-    border: none;
+}
+.btn{
+    border:none;
+    font-size: 20px;
+    background-color: yellow;
+    color:black;
+    padding: 5px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
+    
 }
-
-.btn:hover {
-    background: orange;
+.btn:hover{
+    background-color: white;
+    color: darkturquoise;
+    transform: scale(1.04);
 }
+@media screen and (max-width:767px) {
+    .banner-content h1{
+        font-family: 0.3rem;
 
-/* 🔹 About Us */
-#about-us {
-    text-align: center;
-    padding: 30px;
+        
+    }
+    .banner-content p{
+        font-size: 0.9rem;
+    }
+
+    
 }
-
-/* 🔹 Menu Section */
-#menu-section {
-    text-align: center;
-    padding: 30px;
-}
-
-.menu-items {
+#about {
+    
     display: flex;
     justify-content: center;
+    position: relative;
+    
+
+}
+.h1{
+    position: absolute;
+    top: 5%;
+    left:48%;
+
+}
+#about p{
+    font-size: 2rem;
+    justify-content: center;
+    border: 1px solid #e4b3b3;
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width:100%;
+    
+    background-color: #ddd;
+    
+    
+    
+}
+@media screen and (max-width:767px) {
+   #about p{
+    width: 100%;
+    font-size: 1rem;
+   }
+   .h1{
+    left: 44%;
+   }
+    
+}
+.hd{
+    text-align: center;
+}
+#menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin: 10px;
+    
+   
+        font-family: "Atma", system-ui;
+        font-weight: 300;
+        font-style: normal;
+      
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+ 
+        font-family: "Atma", system-ui;
+        font-weight: 500;
+        font-style: normal;
+      
+      
+     
+        font-family: "Atma", system-ui;
+        font-weight: 600;
+        font-style: normal;
+    
+      
+      
+        font-family: "Atma", system-ui;
+        font-weight: 700;
+        font-style: normal;
+      
+      
+      
+      
+ 
+      
+     
+      
 }
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:300px;
+}
+.card{
+    position: relative;
+    display:flex;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+    padding: 10px;
+   
+    background: white;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
 
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+
+}
+.card img{
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.card img:hover{
+    transform: scale(1.04);
+}
+.card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3 ease;
+
+}
 .card {
-    width: 250px;
+    position: relative; /* Parent element relative */
+    width: 300px;
     border: 1px solid #ddd;
     padding: 10px;
+    
     text-align: center;
     border-radius: 5px;
     background: white;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
-.card img {
+
+
+.card:hover .overlay{
+    opacity: 1;
+}
+.name{
     width: 100%;
-    border-radius: 5px;
-}
-
-/* 🔹 Contact Section */
-#contact {
     text-align: center;
-    padding: 30px;
-    background: black;
-    color: white;
-}
+    background-color: rgba(0,0,0,0.1);
+    font-size: 18px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin: 5px;
+    font-family: "Atma", system-ui;
+ 
+    font-style: normal;
+  
+  
+  
+    font-family: "Atma", system-ui;
+  
+    font-style: normal;
+  
+  
 
-/* 🔹 Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: gray;
-    color: white;
-}
+    font-family: "Atma", system-ui;
+   
+    font-style: normal;
+  
+  
+ 
+    font-family: "Atma", system-ui;
+    
+    font-style: normal;
 
-/* 🔹 Responsive Styles */
-@media screen and (max-width: 768px) {
-    .banner-content h1 {
-        font-size: 2rem;
+  
+  
+    font-family: "Atma", system-ui;
+    font-weight: 700;
+    font-style: normal
+}
+@media screen and (max-width:767px) {
+    #menu-items{
+        flex-direction: column;
+        
     }
-
-    .banner-content p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .card {
+    .card{
         width: 100%;
     }
 }
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(57, 57, 66);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+      
+       
+      
+      
+      
+       
+      
+      
+}
+.contact-info p{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+}
+@media screen and (max-width:767px) {
+    .contact-info p{
+        
+        font-size: 12px;
+       
+    }
+    
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:grey;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media screen and (max-width:767px) {
+    footer{
+        font-size: 12px;
+    }
+    
+}
+
